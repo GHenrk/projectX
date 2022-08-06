@@ -1,0 +1,17 @@
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\bin\Debug\net6.0-windows\projectX.exe
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\bin\Debug\net6.0-windows\projectX.deps.json
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\bin\Debug\net6.0-windows\projectX.runtimeconfig.json
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\bin\Debug\net6.0-windows\projectX.dll
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\bin\Debug\net6.0-windows\projectX.pdb
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.csproj.AssemblyReference.cache
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.Form1.resources
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.csproj.GenerateResource.cache
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.AssemblyInfoInputs.cache
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.AssemblyInfo.cs
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.csproj.CoreCompileInputs.cache
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.dll
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\refint\projectX.dll
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.pdb
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\projectX.genruntimeconfig.cache
+C:\Users\gutoh\Documents\arquivosGit\projectX\projectX\obj\Debug\net6.0-windows\ref\projectX.dll
