@@ -129,11 +129,7 @@ namespace ProjetoFinalTeste
                 }
                
                 atualizaListagem();
-                idSelecionado = null;
-                txbNome.Text = String.Empty;
-                txbEmail.Text = String.Empty;
-                txbCargo.Text = String.Empty;
-                mkTel.Text = String.Empty;
+                resetaEstado();
             }
                
             catch
@@ -239,7 +235,7 @@ namespace ProjetoFinalTeste
         private void lstFuncionario_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             ListView.SelectedListViewItemCollection itens_selecionados = lstFuncionario.SelectedItems;
-
+            btnExcluir.Visible = true;
             foreach(ListViewItem item in itens_selecionados)
             {
                 idSelecionado = Convert.ToInt32(item.SubItems[0].Text);
@@ -253,11 +249,80 @@ namespace ProjetoFinalTeste
 
         private void Novo_Click(object sender, EventArgs e)
         {
+            resetaEstado();
+            txbNome.Focus();
+        }
+
+        private void menuLista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLstExcluir_Click(object sender, EventArgs e)
+        {
+            excluiRegistro();
+            resetaEstado();
+        }
+
+        private void excluiRegistro()
+        {
+            MySqlConnection conexao = new MySqlConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            conexao.ConnectionString = connectionString;
+
+            try
+            {
+
+                DialogResult conf = MessageBox.Show("Você realmente deseja excluir este registro?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (conf == DialogResult.Yes)
+                {
+                    //Excluir
+                    conexao.Open();
+                    cmd.Connection = conexao;
+
+                    cmd.CommandText = "DELETE FROM funcionario WHERE idFunc=@ID";
+                    cmd.Prepare();
+
+                    cmd.Parameters.AddWithValue("@ID", idSelecionado);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("O Registro foi excluido com sucesso!", "SUCESSO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    idSelecionado = null;
+                    atualizaListagem();
+
+                }
+                else
+                {
+                    //Cancel
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR: " + ex, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Algo deu errado nessa operação! \n " + ex);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            excluiRegistro();
+            resetaEstado();
+        }
+
+        private void resetaEstado()
+        {
             idSelecionado = null;
             txbNome.Text = String.Empty;
             txbEmail.Text = String.Empty;
             txbCargo.Text = String.Empty;
             mkTel.Text = String.Empty;
+            btnExcluir.Visible = false;
         }
     }
 }

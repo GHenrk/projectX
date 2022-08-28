@@ -37,6 +37,9 @@
             this.tsOpBtn = new System.Windows.Forms.ToolStripButton();
             this.tsApontamentoBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblVersao = new System.Windows.Forms.Label();
+            this.txbData = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +57,7 @@
             this.toolStripSeparator2});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(784, 25);
+            this.menu.Size = new System.Drawing.Size(1008, 25);
             this.menu.TabIndex = 1;
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
@@ -146,15 +149,58 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitulo.Location = new System.Drawing.Point(364, 202);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(209, 62);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Mini ERP";
+            // 
+            // lblVersao
+            // 
+            this.lblVersao.AutoSize = true;
+            this.lblVersao.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblVersao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblVersao.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblVersao.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblVersao.Location = new System.Drawing.Point(401, 276);
+            this.lblVersao.Name = "lblVersao";
+            this.lblVersao.Size = new System.Drawing.Size(141, 62);
+            this.lblVersao.TabIndex = 4;
+            this.lblVersao.Text = "V0.01";
+            // 
+            // txbData
+            // 
+            this.txbData.BackColor = System.Drawing.Color.Black;
+            this.txbData.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbData.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txbData.Location = new System.Drawing.Point(138, 559);
+            this.txbData.Name = "txbData";
+            this.txbData.Size = new System.Drawing.Size(728, 43);
+            this.txbData.TabIndex = 7;
+            this.txbData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.txbData);
+            this.Controls.Add(this.lblVersao);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.menu);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "A";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);
@@ -172,5 +218,8 @@
         private ToolStripButton tsApontamentoBtn;
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton tsFuncBtn;
+        private Label lblTitulo;
+        private Label lblVersao;
+        private TextBox txbData;
     }
 }

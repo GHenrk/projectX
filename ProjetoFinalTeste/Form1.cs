@@ -30,6 +30,9 @@ namespace ProjetoFinalTeste
             funcionarioForm.WindowState = FormWindowState.Maximized;
             funcionarioForm.MdiParent = this;
             funcionarioForm.Show();
+            lblTitulo.Visible = false;
+            lblVersao.Visible = false;
+            txbData.Visible = false;
         }
 
         
@@ -47,8 +50,10 @@ namespace ProjetoFinalTeste
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txbData.Text = DateTime.Now.ToString("f");
+        }
 
-
- 
     }
 }
